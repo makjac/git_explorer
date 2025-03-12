@@ -1,0 +1,18 @@
+include: package:very_good_analysis/analysis_options.7.0.0.yaml
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/*.gr.dart"
+  errors:
+    invalid_annotation_target: ignore
+    avoid_catches_without_on_clauses: ignore
+    depend_on_referenced_packages: ignore
+    one_member_abstracts: ignore
+    document_ignores: ignore
+
+linter:
+  rules:
+    public_member_api_docs: false
+    avoid_catches_without_on_clauses: false
