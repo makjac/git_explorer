@@ -56,7 +56,7 @@ class AppTheme {
 
         bodyLarge: defaultTextStyle.copyWith(
           fontSize: 14,
-          fontWeight: FontWeight.w400,
+          fontWeight: FontWeight.w600,
         ),
         bodyMedium: defaultTextStyle.copyWith(
           fontSize: 14,
@@ -70,15 +70,15 @@ class AppTheme {
 
         labelLarge: defaultTextStyle.copyWith(
           fontSize: 14,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
         labelMedium: defaultTextStyle.copyWith(
           fontSize: 12,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
         labelSmall: defaultTextStyle.copyWith(
           fontSize: 11,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
       ),
 
@@ -117,7 +117,7 @@ class AppTheme {
           backgroundColor: greenColor,
           foregroundColor: Colors.white,
           textStyle: defaultTextStyle.copyWith(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             height: 1.05,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -132,7 +132,7 @@ class AppTheme {
         style: OutlinedButton.styleFrom(
           foregroundColor: textColor,
           textStyle: defaultTextStyle.copyWith(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             height: 1.05,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -147,7 +147,7 @@ class AppTheme {
         style: TextButton.styleFrom(
           foregroundColor: primaryColor,
           textStyle: defaultTextStyle.copyWith(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             height: 1.05,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -237,7 +237,7 @@ class AppTheme {
         unselectedItemColor: const Color(0xFF57606A),
         selectedLabelStyle: defaultTextStyle.copyWith(
           fontSize: 12,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
         unselectedLabelStyle: defaultTextStyle.copyWith(fontSize: 12),
         elevation: 8,
@@ -374,15 +374,15 @@ class AppTheme {
 
         labelLarge: defaultTextStyle.copyWith(
           fontSize: 14,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
         labelMedium: defaultTextStyle.copyWith(
           fontSize: 12,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
         labelSmall: defaultTextStyle.copyWith(
           fontSize: 11,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
       ),
 
@@ -423,7 +423,7 @@ class AppTheme {
           backgroundColor: greenColor,
           foregroundColor: Colors.white,
           textStyle: defaultTextStyle.copyWith(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             height: 1.05,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -436,7 +436,7 @@ class AppTheme {
         style: OutlinedButton.styleFrom(
           foregroundColor: textColor,
           textStyle: defaultTextStyle.copyWith(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             height: 1.05,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
@@ -450,7 +450,7 @@ class AppTheme {
         style: TextButton.styleFrom(
           foregroundColor: primaryColor,
           textStyle: defaultTextStyle.copyWith(
-            fontWeight: FontWeight.w500,
+            fontWeight: FontWeight.w700,
             height: 1.05,
           ),
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
@@ -525,7 +525,7 @@ class AppTheme {
         unselectedItemColor: const Color(0xFF8B949E),
         selectedLabelStyle: defaultTextStyle.copyWith(
           fontSize: 12,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
         unselectedLabelStyle: defaultTextStyle.copyWith(fontSize: 12),
         elevation: 8,
