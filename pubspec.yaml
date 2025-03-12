@@ -27,3 +27,19 @@ flutter:
 
   assets:
     - assets/icons/
+
+  fonts:
+    - family: Segoe UI
+      fonts:
+        - asset: fonts/segoe-ui/SegoeUI.ttf
+          weight: 400
+        - asset: fonts/segoe-ui/SegoeUI_Light.ttf
+          weight: 200
+        - asset: fonts/segoe-ui/SegoeUI_Semilight.ttf
+          weight: 300
+        - asset: fonts/segoe-ui/SegoeUI_Semibold.ttf
+          weight: 600
+        - asset: fonts/segoe-ui/SegoeUI_Bold.ttf
+          weight: 700
+        - asset: fonts/segoe-ui/SegoeUI_Black.ttf
+          weight: 900
