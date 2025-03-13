@@ -1,4 +1,5 @@
 import 'package:get_it/get_it.dart';
+import 'package:git_explorer/core/Localization/localization_cubit.dart';
 import 'package:git_explorer/core/theme/theme_cubit.dart';
 import 'package:git_explorer/pages/home/api/search_repo_api.dart';
 import 'package:git_explorer/pages/home/cubit/search_repo_cubit.dart';
