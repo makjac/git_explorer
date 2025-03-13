@@ -1,0 +1,83 @@
+{
+  "@@locale": "en",
+  "app_name": "Git Explorer",
+  "@app_name": {
+    "description": "The name of the application"
+  },
+  "dashboard_home_tab": "Home",
+  "@dashboard_home_tab": {
+    "description": "Home tab name [DashboardPage]"
+  },
+  "dashboard_settings_tab": "Settings",
+  "@dashboard_settings_tab": {
+    "description": "Settings tab name [DashboardPage]"
+  },
+  "repo_search_bar_hint": "Search 'language: dart repo_name'",
+  "@repo_search_bar_hint": {
+    "description": "Search bar hint text [HomePage]"
+  },
+  "rs_something_went_wrong": "Something went wrong.",
+  "@rs_something_went_wrong": {
+    "description": "Search error message [HomePage]"
+  },
+  "rs_try_again": "Try Again",
+  "@rs_try_again": {
+    "description": "Try again button message [HomePage]"
+  },
+  "rs_search_for_repositories": "Search for repositories",
+  "@rs_search_for_repositories": {
+    "description": "Search for repositories message [HomePage]"
+  },
+  "rs_repositores_not_match": "Your search did not match any repositories",
+  "@rs_repositores_not_match": {
+    "description": "No repositories found message [HomePage]"
+  },
+  "rs_unknown": "Unknown",
+  "@rs_unknown": {
+    "description": "Unknown programing language [RepoThumbnail]"
+  },
+  "settings": "Settings",
+  "@settings": {
+    "description": "Title for the settings page"
+  },
+  "appearance": "Appearance",
+  "@appearance": {
+    "description": "Header for appearance settings section"
+  },
+  "systemDefault": "System default",
+  "@systemDefault": {
+    "description": "Option to use system default theme"
+  },
+  "light": "Light",
+  "@light": {
+    "description": "Option for light theme"
+  },
+  "dark": "Dark",
+  "@dark": {
+    "description": "Option for dark theme"
+  },
+  "languages": "Languages",
+  "@languages": {
+    "description": "Header for language settings section"
+  },
+  "about": "About",
+  "@about": {
+    "description": "Header for about section"
+  },
+  "termsOfUse": "Terms of Use",
+  "@termsOfUse": {
+    "description": "Button for terms of use"
+  },
+  "sendFeedback": "Send feedback",
+  "@sendFeedback": {
+    "description": "Button to send feedback"
+  },
+  "feedbackSent": "Feedback sent",
+  "@feedbackSent": {
+    "description": "Message shown when feedback is sent"
+  },
+  "version": "Version",
+  "@version": {
+    "description": "Label for app version information"
+  }
+}

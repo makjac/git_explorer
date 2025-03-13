@@ -1,0 +1,23 @@
+{
+  "@@locale": "pl",
+  "app_name": "Git Explorer",
+  "dashboard_home_tab": "Home",
+  "dashboard_settings_tab": "Ustawienia",
+  "repo_search_bar_hint": "Wyszukaj 'language: dart nazwa_repozytorium'",
+  "rs_something_went_wrong": "Coś poszło nie tak.",
+  "rs_try_again": "Spróbuj ponownie",
+  "rs_search_for_repositories": "Szukaj repozytoriów",
+  "rs_repositores_not_match": "Twoje wyszukiwanie nie pasuje do żadnych repozytoriów",
+  "rs_unknown": "Nieznany",
+  "settings": "Ustawienia",
+  "appearance": "Wygląd",
+  "systemDefault": "Domyślny systemowy",
+  "light": "Jasny",
+  "dark": "Ciemny",
+  "languages": "Języki",
+  "about": "O aplikacji",
+  "termsOfUse": "Warunki użytkowania",
+  "sendFeedback": "Wyślij opinię",
+  "feedbackSent": "Opinia wysłana",
+  "version": "Wersja"
+}

@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 import 'package:git_explorer/core/theme/theme_extension.dart';
 import 'package:git_explorer/core/widgets/icons/app_icon.dart';
 import 'package:git_explorer/core/widgets/icons/app_icons.dart';
@@ -86,7 +87,7 @@ class _HomePageState extends State<HomePage> {
 
   Widget _buildAppBar() {
     return SliverAppBar(
-      title: const Text('Git Explorer'),
+      title: Text(context.l10n.app_name),
       floating: true,
       pinned: true,
       expandedHeight: 110,
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage> {
             onChanged: _searchRepositories,
             onClear: _clearSearch,
             focusNode: _focusNode,
-            hintText: 'Search "language:dart repo_name"',
+            hintText: context.l10n.repo_search_bar_hint,
           ),
         ),
       ),
@@ -158,13 +159,13 @@ class _HomePageState extends State<HomePage> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'Something went wrong.',
+              context.l10n.rs_something_went_wrong,
               style: context.textTheme.headlineMedium,
             ),
             const SizedBox(height: 16),
             OutlinedButton(
               onPressed: _retrySearch,
-              child: const Text('Try Again'),
+              child: Text(context.l10n.rs_try_again),
             ),
           ],
         ),
@@ -186,7 +187,7 @@ class _HomePageState extends State<HomePage> {
             const AppIcon(icon: AppIcons.repository, size: 50),
             const SizedBox(height: 16),
             Text(
-              'Search for repositories',
+              context.l10n.rs_search_for_repositories,
               style: context.textTheme.headlineMedium,
             ),
           ],
@@ -203,7 +204,7 @@ class _HomePageState extends State<HomePage> {
           bottom: 20,
         ),
         child: Text(
-          'Your search did not match any repositories',
+          context.l10n.rs_repositores_not_match,
           style: context.textTheme.titleLarge,
         ),
       ),

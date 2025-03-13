@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 import 'package:git_explorer/core/router/app_router.dart';
 
 @RoutePage()
@@ -18,11 +19,14 @@ class DashboardPage extends StatelessWidget {
           bottomNavigationBar: BottomNavigationBar(
             currentIndex: tabsRouter.activeIndex,
             onTap: tabsRouter.setActiveIndex,
-            items: const [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            items: [
               BottomNavigationBarItem(
-                icon: Icon(Icons.settings),
-                label: 'Settings',
+                icon: const Icon(Icons.home),
+                label: context.l10n.dashboard_home_tab,
+              ),
+              BottomNavigationBarItem(
+                icon: const Icon(Icons.settings),
+                label: context.l10n.dashboard_settings_tab,
               ),
             ],
           ),

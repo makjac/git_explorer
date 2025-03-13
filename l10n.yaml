@@ -1,0 +1,5 @@
+synthetic-package: false
+arb-dir: lib/i18n
+template-arb-file: app_en.arb
+output-dir: lib/src/generated/i18n
+nullable-getter: false
