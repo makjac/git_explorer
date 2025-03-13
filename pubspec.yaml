@@ -16,9 +16,12 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
+  flutter_localizations:
+    sdk: flutter
   flutter_svg: ^2.0.17
   freezed_annotation: ^3.0.0
   get_it: ^8.0.3
+  intl: any
   json_annotation: ^4.9.0
   shared_preferences: ^2.5.2
   timeago: ^3.7.0
