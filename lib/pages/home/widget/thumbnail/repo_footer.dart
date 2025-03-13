@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 import 'package:git_explorer/core/theme/theme_extension.dart';
 import 'package:git_explorer/core/utils/number_formatter.dart';
 import 'package:git_explorer/core/widgets/icons/app_icon.dart';
@@ -39,7 +40,10 @@ class RepoFooter extends StatelessWidget {
           backgroundColor: _getLanguageColor(repo.language),
         ),
         const SizedBox(width: 6),
-        Text(repo.language ?? 'Unknown', style: context.textTheme.bodySmall),
+        Text(
+          repo.language ?? context.l10n.rs_unknown,
+          style: context.textTheme.bodySmall,
+        ),
       ],
     );
   }
