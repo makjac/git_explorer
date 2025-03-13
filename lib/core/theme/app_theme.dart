@@ -8,6 +8,7 @@ class AppTheme {
     const backgroundColor = Color(0xFFFFFFFF);
     const surfaceColor = Color(0xFFF6F8FA);
     const greenColor = Color(0xFF2EA043);
+    const iconColor = Color(0xFF586069);
 
     const defaultTextStyle = TextStyle(
       fontFamily: 'Segoe UI',
@@ -302,6 +303,8 @@ class AppTheme {
         thickness: 1,
         space: 1,
       ),
+
+      iconTheme: const IconThemeData(color: iconColor),
     );
   }
 
@@ -312,6 +315,7 @@ class AppTheme {
     const backgroundColor = Color(0xFF0D1117);
     const surfaceColor = Color(0xFF161B22);
     const greenColor = Color(0xFF3FB950);
+    const iconColor = Color(0xFF8B949E);
 
     const defaultTextStyle = TextStyle(
       fontFamily: 'Segoe UI',
@@ -613,6 +617,8 @@ class AppTheme {
         linearTrackColor: primaryColor.withValues(alpha: .2),
         circularTrackColor: primaryColor.withValues(alpha: .2),
       ),
+
+      iconTheme: const IconThemeData(color: iconColor),
     );
   }
 }

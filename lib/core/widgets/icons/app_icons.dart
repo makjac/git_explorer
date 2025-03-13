@@ -1,10 +1,12 @@
 enum AppIcons {
   branch,
+  clear,
   code,
   frok,
   issue,
   pullRequest,
   readme,
+  repository,
   search,
   star,
   settings,

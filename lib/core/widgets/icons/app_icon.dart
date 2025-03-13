@@ -4,7 +4,7 @@ import 'package:git_explorer/core/theme/theme_extension.dart';
 import 'package:git_explorer/core/widgets/icons/app_icons.dart';
 
 class AppIcon extends StatelessWidget {
-  const AppIcon({required this.icon, this.size = 24, this.color, super.key});
+  const AppIcon({required this.icon, this.size = 16, this.color, super.key});
 
   final AppIcons icon;
   final double size;

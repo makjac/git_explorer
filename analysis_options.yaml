@@ -11,6 +11,7 @@ analyzer:
     depend_on_referenced_packages: ignore
     one_member_abstracts: ignore
     document_ignores: ignore
+    require_trailing_commas: ignore
 
 linter:
   rules:
