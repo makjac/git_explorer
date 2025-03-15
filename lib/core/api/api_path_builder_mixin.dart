@@ -25,6 +25,17 @@ mixin ApiPathBuilderMixin {
     return fullUrl;
   }
 
+  String fetchRepoDetails(String fullName) {
+    assert(fullName.trim().isNotEmpty, 'Full name must not be empty');
+    assert(fullName.contains('/'), 'Full name must contain a slash (/)');
+    assert(
+      fullName.split('/').length == 2,
+      'Full name must contain only one slash (/)',
+    );
+
+    return '$baseUrl/repos/$fullName';
+  }
+
   String _buildQueryParams(Map<String, String> params) {
     if (params.isEmpty) return '';
 
