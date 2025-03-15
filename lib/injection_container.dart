@@ -11,6 +11,9 @@ import 'package:git_explorer/pages/repo_details/api/fetch_repo_reference_api.dar
 import 'package:git_explorer/pages/repo_details/api/fetch_repo_tree_api.dart';
 import 'package:git_explorer/pages/repo_details/cubit/repo_details_cubit.dart';
 import 'package:git_explorer/pages/repo_details/repository/repo_details_repository.dart';
+import 'package:git_explorer/pages/repo_issues/api/fetch_repo_issues_api.dart';
+import 'package:git_explorer/pages/repo_issues/cubit/repo_issues_cubit.dart';
+import 'package:git_explorer/pages/repo_issues/repository/repo_issues_reposiotry.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'injection_container.main.dart';
