@@ -52,3 +52,29 @@ Future<void> initSearchRepos() async {
       () => SearchRepoCubit(repoSearchRepository: locator()),
     );
 }
+
+Future<void> initRepoDetailsCubit() async {
+  locator
+    ..registerLazySingleton<FetchRepoDetailsApi>(
+      () =>
+          FetchRepoDetailsApiImpl(dio: locator<Dio>(instanceName: 'cacheDio')),
+    )
+    ..registerLazySingleton<FetchRepoReferenceApi>(
+      () => FetchRepoReferenceApiImpl(
+        dio: locator<Dio>(instanceName: 'cacheDio'),
+      ),
+    )
+    ..registerLazySingleton<FetchRepoTreeApi>(
+      () => FetchRepoTreeApiImpl(dio: locator<Dio>(instanceName: 'cacheDio')),
+    )
+    ..registerFactory<RepoDetailsRepository>(
+      () => RepoDetailsRepositoryImpl(
+        fetchRepoDetailsApi: locator(),
+        fetchRepoReferenceApi: locator(),
+        fetchRepoTreeApi: locator(),
+      ),
+    )
+    ..registerFactory<RepoDetailsCubit>(
+      () => RepoDetailsCubit(repository: locator()),
+    );
+}
