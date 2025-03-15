@@ -13,6 +13,7 @@ Future<void> init() async {
   await initLocalizationCubit();
   await initSearchRepos();
   await initRepoDetailsCubit();
+  await initRepoIssuesCubit();
 }
 
 Future<void> setupDio() async {
@@ -76,5 +77,18 @@ Future<void> initRepoDetailsCubit() async {
     )
     ..registerFactory<RepoDetailsCubit>(
       () => RepoDetailsCubit(repository: locator()),
+    );
+}
+
+Future<void> initRepoIssuesCubit() async {
+  locator
+    ..registerLazySingleton<FetchRepoIssuesApi>(
+      () => FetchRepoIssuesApiImpl(dio: locator()),
+    )
+    ..registerFactory<RepoIssuesRepository>(
+      () => RepoIssuesRepositoryImpl(fetchRepoIssuesApi: locator()),
+    )
+    ..registerFactory<RepoIssuesCubit>(
+      () => RepoIssuesCubit(repoIssuesRepository: locator()),
     );
 }
