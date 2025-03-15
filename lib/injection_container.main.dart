@@ -7,9 +7,29 @@ Future<void> init() async {
 
   locator.registerLazySingleton<SharedPreferences>(() => sharedPreferences);
 
+  await setupDio();
+
   await initThemeCubit();
   await initLocalizationCubit();
   await initSearchRepos();
+  await initRepoDetailsCubit();
+}
+
+Future<void> setupDio() async {
+  final basicDio =
+      Dio()
+        ..interceptors.add(LoggingInterceptor())
+        ..interceptors.add(HeaderInterceptor());
+
+  final cacheDio =
+      Dio()
+        ..interceptors.add(LoggingInterceptor())
+        ..interceptors.add(HeaderInterceptor())
+        ..interceptors.add(CacheInterceptor.setupCacheInterceptor());
+
+  locator
+    ..registerLazySingleton<Dio>(() => basicDio)
+    ..registerLazySingleton<Dio>(() => cacheDio, instanceName: 'cacheDio');
 }
 
 Future<void> initThemeCubit() async {
