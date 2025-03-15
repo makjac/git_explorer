@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/widgets.dart';
 import 'package:git_explorer/pages/dashboard/view/dashboard_page.dart';
 import 'package:git_explorer/pages/home/view/home_page.dart';
+import 'package:git_explorer/pages/repo_details/view/repo_page.dart';
 import 'package:git_explorer/pages/settings/view/settings_page.dart';
 
 part 'app_router.gr.dart';
@@ -20,5 +22,6 @@ class AppRouter extends RootStackRouter {
         AutoRoute(page: SettingsRoute.page),
       ],
     ),
+    AutoRoute(page: RepoRoute.page),
   ];
 }

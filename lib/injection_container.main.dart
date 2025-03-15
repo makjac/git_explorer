@@ -7,9 +7,29 @@ Future<void> init() async {
 
   locator.registerLazySingleton<SharedPreferences>(() => sharedPreferences);
 
+  await setupDio();
+
   await initThemeCubit();
   await initLocalizationCubit();
   await initSearchRepos();
+  await initRepoDetailsCubit();
+}
+
+Future<void> setupDio() async {
+  final basicDio =
+      Dio()
+        ..interceptors.add(LoggingInterceptor())
+        ..interceptors.add(HeaderInterceptor());
+
+  final cacheDio =
+      Dio()
+        ..interceptors.add(LoggingInterceptor())
+        ..interceptors.add(HeaderInterceptor())
+        ..interceptors.add(CacheInterceptor.setupCacheInterceptor());
+
+  locator
+    ..registerLazySingleton<Dio>(() => basicDio)
+    ..registerLazySingleton<Dio>(() => cacheDio, instanceName: 'cacheDio');
 }
 
 Future<void> initThemeCubit() async {
@@ -22,11 +42,39 @@ Future<void> initLocalizationCubit() async {
 
 Future<void> initSearchRepos() async {
   locator
-    ..registerLazySingleton<SearchRepoApi>(SearchRepoApiImpl.new)
+    ..registerLazySingleton<SearchRepoApi>(
+      () => SearchRepoApiImpl(dio: locator()),
+    )
     ..registerFactory<RepoSearchRepository>(
       () => RepoSearchRepositoryImpl(searchRepoApi: locator()),
     )
     ..registerFactory<SearchRepoCubit>(
       () => SearchRepoCubit(repoSearchRepository: locator()),
+    );
+}
+
+Future<void> initRepoDetailsCubit() async {
+  locator
+    ..registerLazySingleton<FetchRepoDetailsApi>(
+      () =>
+          FetchRepoDetailsApiImpl(dio: locator<Dio>(instanceName: 'cacheDio')),
+    )
+    ..registerLazySingleton<FetchRepoReferenceApi>(
+      () => FetchRepoReferenceApiImpl(
+        dio: locator<Dio>(instanceName: 'cacheDio'),
+      ),
+    )
+    ..registerLazySingleton<FetchRepoTreeApi>(
+      () => FetchRepoTreeApiImpl(dio: locator<Dio>(instanceName: 'cacheDio')),
+    )
+    ..registerFactory<RepoDetailsRepository>(
+      () => RepoDetailsRepositoryImpl(
+        fetchRepoDetailsApi: locator(),
+        fetchRepoReferenceApi: locator(),
+        fetchRepoTreeApi: locator(),
+      ),
+    )
+    ..registerFactory<RepoDetailsCubit>(
+      () => RepoDetailsCubit(repository: locator()),
     );
 }

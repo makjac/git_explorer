@@ -26,13 +26,6 @@ class SearchRepoApiImpl with ApiPathBuilderMixin implements SearchRepoApi {
     final response = await _dio.get<Map<String, dynamic>>(
       searchRepo(query, page: page, perPage: perPage),
       cancelToken: cancelToken,
-      options: Options(
-        headers: {
-          'Accept': 'application/vnd.github.v3+json',
-          'Authorization':
-              'token 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',
-        },
-      ),
     );
 
     if (response.statusCode == 200) {

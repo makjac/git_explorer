@@ -79,5 +79,13 @@
   "version": "Version",
   "@version": {
     "description": "Label for app version information"
+  },
+  "repoLoadingStructure": "Loading repository structure...",
+  "@repoLoadingStructure": {
+    "description": "Displayed when the repository structure is loading."
+  },
+  "repoLoadingFiles": "Loading repository files...",
+  "@repoLoadingFiles": {
+    "description": "Displayed when repository files are loading."
   }
 }

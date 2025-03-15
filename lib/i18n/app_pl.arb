@@ -19,5 +19,7 @@
   "termsOfUse": "Warunki użytkowania",
   "sendFeedback": "Wyślij opinię",
   "feedbackSent": "Opinia wysłana",
-  "version": "Wersja"
+  "version": "Wersja",
+  "repoLoadingStructure": "Ładowanie struktury repozytorium...",
+  "repoLoadingFiles": "Ładowanie plików repozytorium..."
 }

@@ -1,9 +1,12 @@
 enum AppIcons {
+  blob,
   branch,
   clear,
   code,
+  commit,
   frok,
   issue,
+  license,
   pullRequest,
   readme,
   repository,
@@ -11,6 +14,7 @@ enum AppIcons {
   star,
   settings,
   tag,
+  tree,
   watch,
 }
 

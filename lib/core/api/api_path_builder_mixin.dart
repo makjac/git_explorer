@@ -1,5 +1,3 @@
-import 'package:git_explorer/core/utils/logger.dart';
-
 mixin ApiPathBuilderMixin {
   // Base URL
   static const String baseUrl = 'https://api.github.com';
@@ -20,9 +18,42 @@ mixin ApiPathBuilderMixin {
 
     final fullUrl = '$baseQueryUrl?q=$query$queryParamsString';
 
-    Logger.showLog(fullUrl, 'ApiPathBuilderMixin');
-
     return fullUrl;
+  }
+
+  String fetchRepoDetails(String fullName) {
+    assert(fullName.trim().isNotEmpty, 'Full name must not be empty');
+    assert(fullName.contains('/'), 'Full name must contain a slash (/)');
+    assert(
+      fullName.split('/').length == 2,
+      'Full name must contain only one slash (/)',
+    );
+
+    return '$baseUrl/repos/$fullName';
+  }
+
+  String fetchRepoReference(String fullName, String defaultBranch) {
+    assert(fullName.trim().isNotEmpty, 'Full name must not be empty');
+    assert(defaultBranch.trim().isNotEmpty, 'default branch must not be empty');
+    assert(fullName.contains('/'), 'Full name must contain a slash (/)');
+    assert(
+      fullName.split('/').length == 2,
+      'Full name must contain only one slash (/)',
+    );
+
+    return '$baseUrl/repos/$fullName/git/refs/heads/$defaultBranch';
+  }
+
+  String fetchRepoTree(String fullName, String sha) {
+    assert(fullName.trim().isNotEmpty, 'Full name must not be empty');
+    assert(sha.trim().isNotEmpty, 'default branch must not be empty');
+    assert(fullName.contains('/'), 'Full name must contain a slash (/)');
+    assert(
+      fullName.split('/').length == 2,
+      'Full name must contain only one slash (/)',
+    );
+
+    return '$baseUrl/repos/$fullName/git/trees/$sha';
   }
 
   String _buildQueryParams(Map<String, String> params) {
