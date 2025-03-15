@@ -9,6 +9,7 @@ class AppTheme {
     const surfaceColor = Color(0xFFF6F8FA);
     const greenColor = Color(0xFF2EA043);
     const iconColor = Color(0xFF586069);
+    const tabBarIndicatorColor = Color(0xFFF78166);
 
     const defaultTextStyle = TextStyle(
       fontFamily: 'Segoe UI',
@@ -222,14 +223,20 @@ class AppTheme {
         ),
       ),
 
-      tabBarTheme: TabBarTheme(
-        labelColor: textColor,
-        unselectedLabelColor: const Color(0xFF57606A),
-        labelStyle: defaultTextStyle.copyWith(fontWeight: FontWeight.w600),
-        unselectedLabelStyle: defaultTextStyle,
-        indicator: const UnderlineTabIndicator(
-          borderSide: BorderSide(color: primaryColor, width: 2),
+      tabBarTheme: const TabBarTheme(
+        labelColor: Color(0xFF1F2328),
+        unselectedLabelColor: Color(0xFF1F2328),
+        labelStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+        unselectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
         ),
+        indicator: UnderlineTabIndicator(
+          borderSide: BorderSide(color: tabBarIndicatorColor, width: 2.5),
+          insets: EdgeInsets.symmetric(horizontal: 8),
+        ),
+        indicatorSize: TabBarIndicatorSize.tab,
+        dividerColor: Colors.transparent,
       ),
 
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
@@ -316,6 +323,7 @@ class AppTheme {
     const surfaceColor = Color(0xFF161B22);
     const greenColor = Color(0xFF3FB950);
     const iconColor = Color(0xFF8B949E);
+    const tabBarIndicatorColor = Color(0xFFF78166);
 
     const defaultTextStyle = TextStyle(
       fontFamily: 'Segoe UI',
@@ -513,14 +521,20 @@ class AppTheme {
         ),
       ),
 
-      tabBarTheme: TabBarTheme(
-        labelColor: textColor,
-        unselectedLabelColor: const Color(0xFF8B949E),
-        labelStyle: defaultTextStyle.copyWith(fontWeight: FontWeight.w600),
-        unselectedLabelStyle: defaultTextStyle,
-        indicator: const UnderlineTabIndicator(
-          borderSide: BorderSide(color: primaryColor, width: 2),
+      tabBarTheme: const TabBarTheme(
+        labelColor: Color.fromARGB(255, 215, 217, 220),
+        unselectedLabelColor: Color.fromARGB(255, 215, 217, 220),
+        labelStyle: TextStyle(fontWeight: FontWeight.w600, fontSize: 14),
+        unselectedLabelStyle: TextStyle(
+          fontWeight: FontWeight.w400,
+          fontSize: 14,
         ),
+        indicator: UnderlineTabIndicator(
+          borderSide: BorderSide(color: tabBarIndicatorColor, width: 2.5),
+          insets: EdgeInsets.symmetric(horizontal: 8),
+        ),
+        indicatorSize: TabBarIndicatorSize.tab,
+        dividerColor: Colors.transparent,
       ),
 
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
