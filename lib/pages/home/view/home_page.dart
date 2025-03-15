@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
               repo: repos[index],
               onTap:
                   () => context.pushRoute(
-                    RepoRoute(fullName: repos[index].fullName ?? ''),
+                    RepoDashboardRoute(fullName: repos[index].fullName ?? ''),
                   ),
             ),
           );
