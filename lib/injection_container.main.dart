@@ -42,7 +42,9 @@ Future<void> initLocalizationCubit() async {
 
 Future<void> initSearchRepos() async {
   locator
-    ..registerLazySingleton<SearchRepoApi>(SearchRepoApiImpl.new)
+    ..registerLazySingleton<SearchRepoApi>(
+      () => SearchRepoApiImpl(dio: locator()),
+    )
     ..registerFactory<RepoSearchRepository>(
       () => RepoSearchRepositoryImpl(searchRepoApi: locator()),
     )
