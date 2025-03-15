@@ -6,16 +6,19 @@ import 'package:git_explorer/pages/repo_details/cubit/repo_details_cubit.dart';
 import 'package:git_explorer/pages/repo_details/widgets/repo_details_widgets.dart';
 
 @RoutePage()
-class RepoPage extends StatefulWidget {
-  const RepoPage({@PathParam('fullName') required this.fullName, super.key});
+class RepoDetailsPage extends StatefulWidget {
+  const RepoDetailsPage({
+    @PathParam('fullName') required this.fullName,
+    super.key,
+  });
 
   final String fullName;
 
   @override
-  State<RepoPage> createState() => _RepoPageState();
+  State<RepoDetailsPage> createState() => _RepoDetailsPageState();
 }
 
-class _RepoPageState extends State<RepoPage> {
+class _RepoDetailsPageState extends State<RepoDetailsPage> {
   @override
   void initState() {
     context.read<RepoDetailsCubit>().loadRepositoryData(widget.fullName);
@@ -25,7 +28,6 @@ class _RepoPageState extends State<RepoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(widget.fullName)),
       body: BlocBuilder<RepoDetailsCubit, RepoDetailsState>(
         builder: (context, state) {
           return switch (state) {
@@ -50,11 +52,11 @@ class _RepoPageState extends State<RepoPage> {
       child: CustomScrollView(
         slivers: [
           SliverPadding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.fromLTRB(16, 24, 16, 16),
             sliver: SliverList(
               delegate: SliverChildListDelegate([
                 if (repoDetails != null) RepoHeader(repoDetails: repoDetails),
-                const Divider(height: 16),
+                const Divider(height: 24),
                 if (repoDetails?.description?.isNotEmpty ?? false)
                   RepoDescription(description: repoDetails!.description!),
                 if (repoDetails?.topics?.isNotEmpty ?? false)
