@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 import 'package:git_explorer/pages/repo_issues/cubit/repo_issues_cubit.dart';
 import 'package:git_explorer/pages/repo_issues/models/repo_issue_type/repo_issue_type.dart';
 import 'package:git_explorer/pages/repo_issues/widgets/repo_issues_widget.dart';
@@ -99,7 +100,7 @@ class _RepoIssuesPageState extends State<RepoIssuesPage> {
             slivers: [
               SliverToBoxAdapter(
                 child: RepoIssuesHeader(
-                  title: _getPageTitle(),
+                  title: _getPageTitle(context),
                   currentType: _currentIssueType,
                   onStateChanged: (newState) {
                     setState(() {
@@ -159,11 +160,11 @@ class _RepoIssuesPageState extends State<RepoIssuesPage> {
     return false;
   }
 
-  String _getPageTitle() {
+  String _getPageTitle(BuildContext context) {
     return switch (_currentIssueType) {
-      IssueStateType.open => 'Open Issues',
-      IssueStateType.closed => 'Closed Issues',
-      IssueStateType.all => 'All Issues',
+      IssueStateType.open => context.l10n.openIssues,
+      IssueStateType.closed => context.l10n.closedIssues,
+      IssueStateType.all => context.l10n.allIssues,
     };
   }
 }
