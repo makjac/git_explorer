@@ -7,7 +7,7 @@
   "rs_something_went_wrong": "Coś poszło nie tak.",
   "rs_try_again": "Spróbuj ponownie",
   "rs_search_for_repositories": "Szukaj repozytoriów",
-  "rs_repositores_not_match": "Twoje wyszukiwanie nie pasuje do żadnych repozytoriów",
+  "rs_repositores_not_match": "Nie znaleziono repozytoriów",
   "rs_unknown": "Nieznany",
   "settings": "Ustawienia",
   "appearance": "Wygląd",
@@ -33,6 +33,6 @@
   "allIssues": "Wszystkie Issues",
   "issueInfo": "#{number} · otworzono · {date}",
   "details": "Szczegóły",
-  "Issues": "Issues",
+  "issues": "Issues",
   "pullRequests": "Pull Requests"
 }
