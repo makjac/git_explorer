@@ -1,0 +1,152 @@
+{
+  "sha": "557d3284ac9dda32a1106bb75be8a23bdccd2f96",
+  "url": "https://api.github.com/repos/flutter/plugins/git/trees/557d3284ac9dda32a1106bb75be8a23bdccd2f96",
+  "tree": [
+    {
+      "path": ".ci.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "6cc325b985feac7d6a1b7432a50db266cca3c407",
+      "size": 8544,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/6cc325b985feac7d6a1b7432a50db266cca3c407"
+    },
+    {
+      "path": ".ci",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "b6a87938d1f29d047aa2c54af08d18f53c7da0d6",
+      "url": "https://api.github.com/repos/flutter/plugins/git/trees/b6a87938d1f29d047aa2c54af08d18f53c7da0d6"
+    },
+    {
+      "path": ".cirrus.yml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e9d513bf5d45179d96e35af03281f95a2ba33254",
+      "size": 13070,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/e9d513bf5d45179d96e35af03281f95a2ba33254"
+    },
+    {
+      "path": ".clang-format",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ac9a91a08008d794097a25175e1c8f9552f67fef",
+      "size": 165,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/ac9a91a08008d794097a25175e1c8f9552f67fef"
+    },
+    {
+      "path": ".gitattributes",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "31fda4bf1c8628256764a7b3b21424ac5a5646c7",
+      "size": 516,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/31fda4bf1c8628256764a7b3b21424ac5a5646c7"
+    },
+    {
+      "path": ".github",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "fd3d46c1e99d2e48f383fea66fd3c00b78be3bb8",
+      "url": "https://api.github.com/repos/flutter/plugins/git/trees/fd3d46c1e99d2e48f383fea66fd3c00b78be3bb8"
+    },
+    {
+      "path": ".gitignore",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8eaeaff8de556934b41a24b1b5aec36745ff2381",
+      "size": 848,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/8eaeaff8de556934b41a24b1b5aec36745ff2381"
+    },
+    {
+      "path": ".gitmodules",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "1d3bb5da1bfbfef39ee86a5479228f39a2405a49",
+      "size": 94,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/1d3bb5da1bfbfef39ee86a5479228f39a2405a49"
+    },
+    {
+      "path": ".opensource",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "cbc01d644c732da0ac9530dc34f409108e018499",
+      "url": "https://api.github.com/repos/flutter/plugins/git/trees/cbc01d644c732da0ac9530dc34f409108e018499"
+    },
+    {
+      "path": "AUTHORS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "3112c3b3fd058a23b253545565217fa0a305520b",
+      "size": 2680,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/3112c3b3fd058a23b253545565217fa0a305520b"
+    },
+    {
+      "path": "CODEOWNERS",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "603e4a24fcc0e6093dd4055313569e2cf8c90d3e",
+      "size": 4241,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/603e4a24fcc0e6093dd4055313569e2cf8c90d3e"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "8441f06a5884428a27b5e24365d104d2ba429f5e",
+      "size": 2530,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/8441f06a5884428a27b5e24365d104d2ba429f5e"
+    },
+    {
+      "path": "FlutterFire.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "551d9b642c317afc5577dc6b2e0539aacf76b7e2",
+      "size": 296,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/551d9b642c317afc5577dc6b2e0539aacf76b7e2"
+    },
+    {
+      "path": "LICENSE",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "c6823b81eb845db89cee59cbbc7ee0b0b63d86ec",
+      "size": 1519,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/c6823b81eb845db89cee59cbbc7ee0b0b63d86ec"
+    },
+    {
+      "path": "README.md",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "df38e848a6ae920360470d3dcea413f6f716fc48",
+      "size": 16925,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/df38e848a6ae920360470d3dcea413f6f716fc48"
+    },
+    {
+      "path": "analysis_options.yaml",
+      "mode": "100644",
+      "type": "blob",
+      "sha": "498d19dfb4ae8b71671d3fc0b7c84e3a5f56148c",
+      "size": 10830,
+      "url": "https://api.github.com/repos/flutter/plugins/git/blobs/498d19dfb4ae8b71671d3fc0b7c84e3a5f56148c"
+    },
+    {
+      "path": "packages",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "2c4e33cbc007514b5dbfc0a099f42b48bd2fc3bf",
+      "url": "https://api.github.com/repos/flutter/plugins/git/trees/2c4e33cbc007514b5dbfc0a099f42b48bd2fc3bf"
+    },
+    {
+      "path": "script",
+      "mode": "040000",
+      "type": "tree",
+      "sha": "177d96dfdc26b5599c7a8103c481767be280e9f1",
+      "url": "https://api.github.com/repos/flutter/plugins/git/trees/177d96dfdc26b5599c7a8103c481767be280e9f1"
+    },
+    {
+      "path": "site-shared",
+      "mode": "160000",
+      "type": "commit",
+      "sha": "142de133477bdede1746f992e656c4b43c4c7442"
+    }
+  ],
+  "truncated": false
+}
