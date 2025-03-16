@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:git_explorer/core/Localization/app_localizations_extension.dart';
+import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 import 'package:git_explorer/core/router/app_router.dart';
 import 'package:git_explorer/core/widgets/icons/app_icon.dart';
 import 'package:git_explorer/core/widgets/icons/app_icons.dart';

@@ -40,7 +40,8 @@ void main() {
     );
 
     blocTest<RepoIssuesCubit, RepoIssuesState>(
-      'emits [loadingClosed, closedIssuesFetched] when fetchClosedIssues succeeds',
+      'emits [loadingClosed, closedIssuesFetched] when fetchClosedIssues '
+      'succeeds',
       build: () {
         when(() => repository.getOpenIssues()).thenReturn([]);
         when(() => repository.getClosedIssues()).thenReturn([]);

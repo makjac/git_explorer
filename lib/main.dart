@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:git_explorer/app/app.dart';
-import 'package:git_explorer/core/Localization/localization_cubit.dart';
+import 'package:git_explorer/core/localization/localization_cubit.dart';
 import 'package:git_explorer/core/theme/theme_cubit.dart';
 import 'package:git_explorer/core/utils/logger.dart';
 import 'package:git_explorer/injection_container.dart' as di;

@@ -43,7 +43,7 @@ void main() {
         (_) async => Response(
           data: repoDetailsJson,
           statusCode: 304,
-          requestOptions: RequestOptions(path: ''),
+          requestOptions: RequestOptions(),
         ),
       );
 
@@ -54,11 +54,8 @@ void main() {
 
     test('returns null when the response status is not 200 or 304', () async {
       when(mockDio.get<Map<String, dynamic>>(any)).thenAnswer(
-        (_) async => Response(
-          data: null,
-          statusCode: 404,
-          requestOptions: RequestOptions(path: ''),
-        ),
+        (_) async =>
+            Response(statusCode: 404, requestOptions: RequestOptions()),
       );
 
       final result = await fetchRepoDetailsApi.call(fullName: fullName);
