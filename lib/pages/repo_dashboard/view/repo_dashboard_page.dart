@@ -1,12 +1,14 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:git_explorer/core/Localization/app_localizations_extension.dart';
 import 'package:git_explorer/core/router/app_router.dart';
 import 'package:git_explorer/core/widgets/icons/app_icon.dart';
 import 'package:git_explorer/core/widgets/icons/app_icons.dart';
 import 'package:git_explorer/injection_container.dart';
 import 'package:git_explorer/pages/repo_details/cubit/repo_details_cubit.dart';
 import 'package:git_explorer/pages/repo_issues/cubit/repo_issues_cubit.dart';
+import 'package:git_explorer/pages/repo_pull_requests/cubit/repo_pull_request_cubit.dart';
 
 @RoutePage()
 class RepoDashboardPage extends StatelessWidget {
@@ -24,6 +26,7 @@ class RepoDashboardPage extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => locator<RepoDetailsCubit>()),
         BlocProvider(create: (context) => locator<RepoIssuesCubit>()),
+        BlocProvider(create: (context) => locator<RepoPullRequestCubit>()),
       ],
       child: AutoTabsRouter(
         routes: _buildRoutes(),
@@ -54,26 +57,26 @@ class RepoDashboardPage extends StatelessWidget {
         onTap: tabsRouter.setActiveIndex,
         padding: EdgeInsets.zero,
         labelPadding: const EdgeInsets.symmetric(vertical: 8),
-        tabs: _buildTabs(),
+        tabs: _buildTabs(context),
       ),
     );
   }
 
-  List<Tab> _buildTabs() {
-    return const [
+  List<Tab> _buildTabs(BuildContext context) {
+    return [
       Tab(
-        text: 'Details',
-        icon: AppIcon(icon: AppIcons.repository),
+        text: context.l10n.details,
+        icon: const AppIcon(icon: AppIcons.repository),
         height: _tabHeight,
       ),
       Tab(
-        text: 'Issues',
-        icon: AppIcon(icon: AppIcons.issue),
+        text: context.l10n.issues,
+        icon: const AppIcon(icon: AppIcons.issue),
         height: _tabHeight,
       ),
       Tab(
-        text: 'Pull Requests',
-        icon: AppIcon(icon: AppIcons.pullRequest),
+        text: context.l10n.pullRequests,
+        icon: const AppIcon(icon: AppIcons.pullRequest),
         height: _tabHeight,
       ),
     ];
