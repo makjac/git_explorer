@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 import 'package:git_explorer/core/theme/theme_extension.dart';
 import 'package:git_explorer/core/widgets/icons/app_icon.dart';
 import 'package:git_explorer/core/widgets/icons/app_icons.dart';
@@ -59,8 +60,11 @@ class RepoIssueThumbnail extends StatelessWidget {
 
   Widget _issueReference(BuildContext context) {
     return Text(
-      '#${issue.number} · opened '
-      '${timeago.format(issue.updatedAt ?? DateTime.now())}',
+      context.l10n.issueInfo(
+        issue.number.toString(),
+        timeago.format(issue.createdAt ?? DateTime.now()),
+      ),
+
       style: context.textTheme.bodySmall,
     );
   }
