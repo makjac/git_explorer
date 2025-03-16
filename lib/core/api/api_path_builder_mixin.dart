@@ -11,14 +11,13 @@ mixin ApiPathBuilderMixin {
     assert(page >= 1, 'Page must be greater than or equal to 1');
 
     final queryParams = {
-      'q': query,
       'page': page.toString(),
       'per_page': perPage.toString(),
     };
 
-    final queryParamsString = _buildQueryParams(queryParams);
+    final queryParamsString = _buildSearchQueryParams(queryParams);
 
-    return '$baseUrl/search/repositories$queryParamsString';
+    return '$baseUrl/search/repositories?q=$query$queryParamsString';
   }
 
   String fetchRepoDetails(String fullName) {
@@ -121,6 +120,21 @@ mixin ApiPathBuilderMixin {
           return '$prefix${Uri.encodeComponent(param.key)}='
               '${Uri.encodeComponent(param.value)}';
         }).join();
+
+    return queryString;
+  }
+
+  String _buildSearchQueryParams(Map<String, String> params) {
+    if (params.isEmpty) return '';
+
+    final queryString =
+        params.entries
+            .map(
+              (e) =>
+                  '&${Uri.encodeComponent(e.key)}='
+                  '${Uri.encodeComponent(e.value)}',
+            )
+            .join();
 
     return queryString;
   }
