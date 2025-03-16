@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:git_explorer/core/Localization/localization_cubit.dart';
+import 'package:git_explorer/core/localization/localization_cubit.dart';
 import 'package:git_explorer/core/router/app_router.dart';
 import 'package:git_explorer/core/theme/app_theme.dart';
 import 'package:git_explorer/core/theme/theme_cubit.dart';
