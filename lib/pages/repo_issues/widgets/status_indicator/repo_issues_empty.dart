@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 
 class RepoIssuesEmpty extends StatelessWidget {
   const RepoIssuesEmpty({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       spacing: 16,
       mainAxisAlignment: MainAxisAlignment.center,
-      children: [Icon(Icons.info_outline, size: 40), Text('No issues found')],
+      children: [
+        const Icon(Icons.info_outline, size: 40),
+        Text(context.l10n.noIssuesFound),
+      ],
     );
   }
 }
