@@ -87,5 +87,65 @@
   "repoLoadingFiles": "Loading repository files...",
   "@repoLoadingFiles": {
     "description": "Displayed when repository files are loading."
+  },
+  "allPullRequests": "All Pull Requests",
+  "@allPullRequests": {
+    "description": "Title for the pull requests screen header."
+  },
+  "noPullRequestsFound": "No pull requests found",
+  "@noPullRequestsFound": {
+    "description": "Message displayed when no pull requests are available."
+  },
+  "unableToFetchPullRequests": "Unable to fetch pull requests",
+  "@unableToFetchPullRequests": {
+    "description": "Default error message when pull requests cannot be fetched."
+  },
+  "noTitle": "No title",
+  "@noTitle": {
+    "description": "Fallback text when pull request title is not provided."
+  },
+  "pullRequestInfo": "#{number} opened on {date}",
+  "@pullRequestInfo": {
+    "description": "Information about a pull request including its number and the date it was opened. Placeholders: number, date.",
+    "placeholders": {
+      "number": {},
+      "date": {}
+    }
+  },
+  "issueInfo": "#{number} · opened · {date}",
+  "openIssues": "Open Issues",
+  "@openIssues": {
+    "description": "Title for the open issues screen header."
+  },
+  "closedIssues": "Closed Issues",
+  "@closedIssues": {
+    "description": "Title for the closed issues screen header."
+  },
+  "allIssues": "All Issues",
+  "@allIssues": {
+    "description": "Title for the all issues screen header."
+  },
+  "noIssuesFound": "No issues found",
+  "@noIssuesFound": {
+    "description": "Message displayed when no issues are available."
+  },
+  "@issueInfo": {
+    "description": "Information about an issue including its number and the date it was opened. Placeholders: number, date.",
+    "placeholders": {
+      "number": {},
+      "date": {}
+    }
+  },
+  "details": "Details",
+  "@details": {
+    "description": "Tab name for the details section of the repository."
+  },
+  "issues": "Issues",
+  "@issues": {
+    "description": "Tab name for the issues section of the repository."
+  },
+  "pullRequests": "Pull Requests",
+  "@pullRequests": {
+    "description": "Tab name for the pull requests section of the repository."
   }
 }

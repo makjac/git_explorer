@@ -82,6 +82,31 @@ mixin ApiPathBuilderMixin {
     return '$baseUrl/repos/$fullName/issues$queryParamsString';
   }
 
+  String fetchRepoPullRequest(
+    String fullName, {
+    int page = 1,
+    int perPage = 20,
+  }) {
+    assert(fullName.trim().isNotEmpty, 'Full name must not be empty');
+    assert(fullName.contains('/'), 'Full name must contain a slash (/)');
+    assert(
+      fullName.split('/').length == 2,
+      'Full name must contain only one slash (/)',
+    );
+    assert(perPage >= 1, 'Limit (per_page) must be greater than or equal to 1');
+    assert(page >= 1, 'Page must be greater than or equal to 1');
+
+    final queryParams = {
+      'page': page.toString(),
+      'per_page': perPage.toString(),
+      'state': 'all',
+    };
+
+    final queryParamsString = _buildQueryParams(queryParams);
+
+    return '$baseUrl/repos/$fullName/pulls$queryParamsString';
+  }
+
   String _buildQueryParams(Map<String, String> params) {
     if (params.isEmpty) return '';
 

@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:git_explorer/core/localization/app_localizations_extension.dart';
 import 'package:git_explorer/core/router/app_router.dart';
@@ -118,10 +119,13 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.only(top: 16),
             child: RepoThumbnail(
               repo: repos[index],
-              onTap:
-                  () => context.pushRoute(
-                    RepoDashboardRoute(fullName: repos[index].fullName ?? ''),
-                  ),
+              onTap: () {
+                SystemChannels.textInput.invokeMethod('TextInput.hide');
+                FocusManager.instance.primaryFocus?.unfocus();
+                context.pushRoute(
+                  RepoDashboardRoute(fullName: repos[index].fullName ?? ''),
+                );
+              },
             ),
           );
         }, childCount: repos.length),

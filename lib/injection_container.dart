@@ -14,6 +14,9 @@ import 'package:git_explorer/pages/repo_details/repository/repo_details_reposito
 import 'package:git_explorer/pages/repo_issues/api/fetch_repo_issues_api.dart';
 import 'package:git_explorer/pages/repo_issues/cubit/repo_issues_cubit.dart';
 import 'package:git_explorer/pages/repo_issues/repository/repo_issues_reposiotry.dart';
+import 'package:git_explorer/pages/repo_pull_requests/api/fetch_repo_pull_request_api.dart';
+import 'package:git_explorer/pages/repo_pull_requests/cubit/repo_pull_request_cubit.dart';
+import 'package:git_explorer/pages/repo_pull_requests/repository/repo_pull_request_repository.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 part 'injection_container.main.dart';
