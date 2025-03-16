@@ -21,5 +21,18 @@
   "feedbackSent": "Opinia wysłana",
   "version": "Wersja",
   "repoLoadingStructure": "Ładowanie struktury repozytorium...",
-  "repoLoadingFiles": "Ładowanie plików repozytorium..."
+  "repoLoadingFiles": "Ładowanie plików repozytorium...",
+  "allPullRequests": "Wszystkie Pull Requesty",
+  "noPullRequestsFound": "Nie znaleziono pull requestów",
+  "unableToFetchPullRequests": "Nie można pobrać pull requestów",
+  "noTitle": "Brak tytułu",
+  "pullRequestInfo": "#{number} otworzono {date}",
+  "noIssuesFound": "Nie znaleziono issues",
+  "openIssues": "Otwarte Issues",
+  "closedIssues": "Zamknięte Issues",
+  "allIssues": "Wszystkie Issues",
+  "issueInfo": "#{number} · otworzono · {date}",
+  "details": "Szczegóły",
+  "Issues": "Issues",
+  "pullRequests": "Pull Requests"
 }
